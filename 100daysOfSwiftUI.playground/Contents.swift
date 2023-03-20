@@ -5,11 +5,15 @@ print(greeting)
 
 //Define initial temp
 
-let originalTempInFarenheit = 37.2;
+let originalTempInCelsius = 37.95;
 
-var tempInCelsius = ((originalTempInFarenheit*9)/5) + 32;
-var backToFarenheit = ((tempInCelsius-32)*5)/9
-print ("The temp in Celsius is: \(tempInCelsius)")
-print("Convering back to Farenheit \(backToFarenheit)")
+var tempInFarenheit = ((originalTempInCelsius*9)/5) + 32;
+var backToCelsius = ((tempInFarenheit-32)*5)/9
+print ("The temp in Celsius is: \(tempInFarenheit)°C")
+tempInFarenheit = Double(String(format:"%.3f", tempInFarenheit)) ?? tempInFarenheit
+print ("The temp in Celsius rounded to two decimal places is: \(tempInFarenheit)°C")
+print("Convering back to Farenheit \(backToCelsius)°F")
+backToCelsius = Double(String(format:"%.3f", backToCelsius)) ?? backToCelsius
+print("Convering back to Farenheit and rounding down to 2 decimal places:  \(backToCelsius)°F")
 
 
